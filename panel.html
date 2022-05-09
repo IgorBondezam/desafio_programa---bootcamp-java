@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="panel.css">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD
+@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD
+@48,400,0,0" />
+    <script src="panel.js"></script>
+    <title>Panel - SISTEMA</title>
+</head>
+
+<body>
+
+    <div id="lista_lateral">
+        <a id="cliente" class="botoes_menu"><span class="material-symbols-outlined"> group_add</span> Clientes</a>
+        <a id="produto" class="botoes_menu"><span class="material-symbols-outlined">redeem</span> Produtos</a>
+        <a id="pedido" class="botoes_menu"><span class="material-symbols-outlined"> shopping_cart</span> Pedidos</a>
+        <a id="sair" class="botoes_menu">Sair</a>
+    </div>
+    <div>
+        <main>
+
+            <!-- CLIENTES -->
+
+            <div id="aba_cliente" class="desaparecer">
+                <div class="alin-x">
+                    <h1 id="client_title">Clientes</h1>
+                    <div id="x-cliente" class="fechar">x</div>
+                </div>
+                <label for="codigo_cliente">Código</label>
+                <input type="text" name="codigo_cliente" id="codigo_cliente" class="tamanho_texto" value="">
+                <label for="nome_cliente">Nome</label>
+                <input type="text" name="nome_cliente" id="nome_cliente" value="">
+                <label for="cadastro_cliente">Data Cadastro</label>
+                <input type="date" name="cadastro_cliente" id="cadastro_cliente" value="">
+                <div id="botoes_clientes">
+                    <div id="maior-menor">
+                        <input type="button" class="botao_ir_vir altura_botoes" name="botao_voltar" id="botao_voltar"
+                            value="<">
+                        <input type="button" class="botao_ir_vir altura_botoes" name="botao_avancar" id="botao_avancar"
+                            value=">">
+                    </div>
+                    <div id="novo-salvar">
+                        <input type="button" class="altura_botoes botoes_novo_salvar" name="botao_novo" id="botao_novo"
+                            value="Novo">
+                        <input type="button" class="altura_botoes botoes_novo_salvar" name="botao_salvar"
+                            id="botao_salvar" value="Salvar">
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUTOS -->
+
+            <div id="aba_prod" class="desaparecer">
+                <div class="alin-x">
+                    <h1 id="produto_title">Produtos</h1>
+                    <div id="x-produto" class="fechar">x</div>
+                </div>
+                <label for="codigo_produto">Código</label>
+                <input type="text" name="codigo_produto" id="codigo_produto" class="tamanho_texto" value="">
+                <label for="desc_produto">Descrição</label>
+                <input type="text" name="desc_produto" class="texto_negrito" id="desc_produto" value="">
+                <label for="preco_produto">Preço</label>
+                <input type="text" name="preco_produto" class="texto_negrito" id="preco_produto" value="">
+                <label for="quantidade_produto">Quantidade</label>
+                <input type="number" name="quantidade_produto" class="texto_negrito" id="quantidade_produto" value="">
+                <div id="botoes_prod">
+                    <div id="maior-menor_prod">
+                        <input type="button" class="botao_ir_vir altura_botoes" name="botao_voltar"
+                            id="botao_voltar_prod" value="<">
+                        <input type="button" class="botao_ir_vir altura_botoes" name="botao_avancar"
+                            id="botao_avancar_prod" value=">">
+                    </div>
+                    <div id="novo-salvar_prod">
+                        <input type="button" class="altura_botoes botoes_novo_salvar" name="botao_novo"
+                            id="botao_novo_prod" value="Novo">
+                        <input type="button" class="altura_botoes botoes_novo_salvar" name="botao_salvar"
+                            id="botao_salvar_prod" value="Salvar">
+                    </div>
+                </div>
+            </div>
+
+            <!-- PEDIDOS -->
+
+            <div id="aba_ped" class="desaparecer">
+                <div class="alin-x">
+                    <h1 id="pedido_title">Pedidos</h1>
+                    <div id="x-pedido" class="fechar">x</div>
+                </div>
+                <label for="codigo_pedido">Código do Cliente</label>
+                <input type="text" name="codigo_pedido" id="codigo_pedido" class="tamanho_texto" value="">
+                <label for="pedido_cliente">Cliente</label>
+                <input type="text" name="pedido_cliente" disabled class="texto_negrito" id="pedido_cliente" value="">
+                <div class="borda_localiza">
+                    <label for="first_txt" class="font_azul texto_negrito">Localizar produto</label>
+                    <div id="localiza_prod">
+                        <input type="text" name="first_txt" class="texto_negrito" id="first_txt" value="">
+                        <input type="text" name="segunda_txt" disabled class="texto_negrito distancia_txt"
+                            id="segunda_txt" value="">
+                        <input type="text" name="terc_txt" disabled class="texto_negrito distancia_txt" id="terc_txt"
+                            value="">
+                        <input type="text" name="quart_txt" class="texto_negrito distancia_txt" id="quart_txt" value="">
+                        <input type="button" class="lancar_ped" name="lancar_ped distancia_txt" id="lancar_ped"
+                            value="Lançar no Pedido">
+                    </div>
+                </div>
+                <label class="font_azul texto_negrito">Itens do Pedido</label>
+                <table>
+                    <tbody>
+                        <thead class="texto_negrito cabeca_tabela">
+                            <th id="item_tabela">Item</th>
+                            <th id="descricao_tabela">Descrição</th>
+                            <th id="preco_tabela">Preço</th>
+                            <th id="qtd_tabela">Qtd</th>
+                            <th id="subtotal_tabela">Sub Total</th>
+                        </thead>
+                        <tr>
+                            <td>a</td>
+                            <td>b</td>
+                            <td>c</td>
+                            <td>d</td>
+                            <td>e</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="div_total">
+                    <div id="total">
+                        R$ 23.50
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+
+    </main>
+    </div>
+</body>
+
+</html>

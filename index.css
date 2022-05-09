@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --fontes: Verdana;
+}
+
+.desaparecer{
+    display: none !important;
+}
+
+.cor_escuro{
+    background-color: rgba(0, 0, 0, 0.897);
+}
+
+
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+fieldset{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    margin-top: 2px;
+    font-family: var(--fontes);
+}
+
+.digitar{
+    width: 300px;
+    padding: 5px;
+    font-family: var(--fontes);
+    background-color: white;
+    border: 1px solid black;
+}
+
+.digitar-escuro{
+        width: 300px;
+        padding: 5px;
+        font-family: var(--fontes);
+        background-color: rgba(255, 255, 255, 0.031);
+        border: 1px solid rgba(0, 0, 0, 0.7);
+        color: rgba(255, 255, 255, 0.064);
+}
+
+#caixa{
+    border: 2px solid black;
+}
+
+.link_panel_escuro{
+    font-family: var(--fontes);
+    margin-top: 5px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.07);
+    background-color: #2195f329;
+    border: 0;
+    text-decoration: none;
+}
+
+.link_panel{
+    font-family: var(--fontes);
+    margin-top: 5px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    background-color: #2195f3;
+    border: 0;
+    text-decoration: none;
+
+}
+
+
+#quadrado-erro{
+    background-color: white;
+    width: 30%;
+    height: 15%;
+    font-family: var(--fontes);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 5px;
+    padding-left: 10px;
+    z-index: 999;
+
+}
+
+#fala-erro{
+    padding-right: 10%;
+}
+
+#btn_ok{
+    
+    width: 15%;
+    height: 35%;
+    background-color: #2195f3;
+    color: white;
+    font-family: var(--fontes);
+    border: 0;
+    border-radius: 10px;
+    align-items: flex-end;
+
+}
