@@ -1,3 +1,6 @@
+import {clientes as dadosClientes} from "../arquivos/clientes.js"
+import {produtos as dadosProdutos} from "../arquivos/produtos.js"
+
 window.onload = function(){
 
     const botao_voltar = document.getElementById("botao_voltar")
@@ -6,7 +9,6 @@ window.onload = function(){
     const botao_avancar_prod = document.getElementById("botao_avancar_prod")
     const sair = document.getElementById("sair")
 
-
     const clientes = document.getElementById("cliente")
     const produto = document.getElementById("produto")
     const pedido = document.getElementById("pedido")
@@ -14,7 +16,18 @@ window.onload = function(){
     const aba_cliente = document.getElementById("aba_cliente")
     const aba_prod = document.getElementById("aba_prod")
     const aba_ped = document.getElementById("aba_ped")
+
+    const valor_cod_cli = document.getElementById("codigo_cliente")
+    const valor_nome_cli = document.getElementById("nome_cliente")
+    const data_cli = document.getElementById("data_cliente")
     
+    const valor_cod_pro = document.getElementById("codigo_produto")
+    const valor_desc_pro = document.getElementById("desc_produto")
+    const valor_preco_pro = document.getElementById("preco_produto")
+    const valor_quant_pro = document.getElementById("quantidade_produto")
+
+
+    let i = 0
     
     //os X dos panels
 
@@ -34,6 +47,9 @@ window.onload = function(){
         aba_cliente.classList.remove("desaparecer")
         aba_prod.classList.add("desaparecer")
         aba_ped.classList.add("desaparecer")
+        
+        i = 0
+        abrir_clientes()
 
     })
 
@@ -46,6 +62,9 @@ window.onload = function(){
          aba_prod.classList.remove("desaparecer")
          aba_cliente.classList.add("desaparecer")
          aba_ped.classList.add("desaparecer")
+
+         i = 0
+         abrir_produtos()
 
 
     })
@@ -67,21 +86,64 @@ window.onload = function(){
     // botoes <   >
 
     botao_voltar.addEventListener("click", function(){
-        aba_ped.classList.remove("desaparecer")
-        aba_cliente.classList.add("desaparecer")
+        if(i > 0){
+        i--
+        abrir_clientes()
+        }
     })
     botao_avancar.addEventListener("click", function(){
-        aba_cliente.classList.add("desaparecer")
-        aba_prod.classList.remove("desaparecer")
+        if(i < (dadosClientes.length-1) ){
+        i++
+        abrir_clientes()
+        }
     })
 
+    
     botao_voltar_prod.addEventListener("click", function(){
-        aba_cliente.classList.remove("desaparecer")
-        aba_prod.classList.add("desaparecer")
+        if(i > 0 ){
+            i--
+            abrir_produtos()
+            }
     })
     botao_avancar_prod.addEventListener("click", function(){
-        aba_ped.classList.remove("desaparecer")
-        aba_prod.classList.add("desaparecer")
+        if(i < (dadosProdutos.length-1) ){
+            i++
+            abrir_produtos()
+            }
     })
+
+    function abrir_clientes(){
+        for(let valor in dadosClientes[i]){
+            if(valor == "codCliente"){
+                valor_cod_cli.value = dadosClientes[i][valor]
+                }
+            if(valor == "nomeCliente"){
+                valor_nome_cli.value = dadosClientes[i][valor]
+                }
+            if(valor == "dataCadCli"){
+                data_cli.value = dadosClientes[i][valor]
+                }
+        }
+    }
+
+    function abrir_produtos(){
+        for(let valor in dadosProdutos[i]){
+            if(valor == "codProduto"){
+                valor_cod_pro.value = dadosProdutos[i][valor]
+                }
+            if(valor == "descProduto"){
+                valor_desc_pro.value = dadosProdutos[i][valor]
+                }
+            if(valor == "precoProduto"){
+                valor_preco_pro.value = dadosProdutos[i][valor]
+                }
+            if(valor == "qtdEstoqueProd"){
+                valor_quant_pro.value = dadosProdutos[i][valor]
+                }
+        }
+    }
+
+
+
 
 }

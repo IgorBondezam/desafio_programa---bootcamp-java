@@ -96,11 +96,10 @@ label{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: flex-end;
     padding: 5px;
     padding-left: 10px;
-    z-index: 999;
-
+    border: 0;
+    position: absolute;
 }
 
 #fala-erro{
@@ -110,12 +109,21 @@ label{
 #btn_ok{
     
     width: 15%;
-    height: 35%;
+    height: 65%;
     background-color: #2195f3;
     color: white;
     font-family: var(--fontes);
     border: 0;
     border-radius: 10px;
-    align-items: flex-end;
+    align-items: flex-end;    
 
+}
+
+
+#espaco{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
