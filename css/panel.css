@@ -6,7 +6,7 @@
 
 
 .desaparecer{
-    display: none;
+    display: none !important;
 }
 
 body{
@@ -50,11 +50,9 @@ a{
 
 #sair{
     color:red;
-    width: auto;
-    padding: 5px;
+    padding-right: 5px;
     position:fixed;
     bottom: 5px;
-    margin-left: 10%;
 }
 
 .botoes_menu:hover{
@@ -378,3 +376,57 @@ label{
     background-color: rgba(128, 128, 128, 0.434);
     padding: 5px;
 }
+
+.filtro_escuro{
+    filter: brightness(0.2);
+    background-color: rgba(0, 0, 0, 0.805);
+}
+/* Css Tratamento de erro */
+
+#quadrado-erro{
+    background-color: white;
+    width: 30%;
+    height: 15%;
+    font-family: var(--fontes);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px;
+    padding-left: 10px;
+    border: 0;
+    position: absolute;
+    right: 27%;
+    bottom: 60%;
+    filter: none;
+    margin: 0 auto;
+}
+
+
+#fala-erro{
+    padding-right: 10%;
+}
+
+#espaco{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+#btn_ok{
+    
+    width: 15%;
+    height: 65%;
+    background-color: #2195f3;
+    color: white;
+    font-family: var(--fontes);
+    border: 0;
+    border-radius: 10px;
+    align-items: flex-end;  
+    cursor: pointer;  
+
+}
+

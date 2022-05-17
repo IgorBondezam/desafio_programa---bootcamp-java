@@ -12,19 +12,20 @@
         href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD
 @48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script type="module" src="../js/panel.js"></script>
     <title>Panel - SISTEMA</title>
 </head>
 
 <body>
 
-    <div id="lista_lateral">
+    <div id="lista_lateral" class="">
         <a id="cliente" class="botoes_menu"><span class="material-symbols-outlined"> group_add</span> Clientes</a>
         <a id="produto" class="botoes_menu"><span class="material-symbols-outlined">redeem</span> Produtos</a>
         <a id="pedido" class="botoes_menu"><span class="material-symbols-outlined"> shopping_cart</span> Pedidos</a>
-        <a id="sair" class="botoes_menu">Sair</a>
+        <a id="sair" class="botoes_menu"><span class="material-symbols-outlined">power_settings_new</span> Sair</a>
     </div>
-    <div>
+    <div id="div_main" class="">
         <main>
 
             <!-- CLIENTES -->
@@ -35,11 +36,12 @@
                     <div id="x-cliente" class="fechar">x</div>
                 </div>
                 <label for="codigo_cliente">Código</label>
-                <input type="text" name="codigo_cliente" id="codigo_cliente" class="tamanho_texto" value="">
+                <input type="text" name="codigo_cliente" class="texto_negrito" id="codigo_cliente" class="tamanho_texto"
+                    value="">
                 <label for="nome_cliente">Nome</label>
-                <input type="text" name="nome_cliente" id="nome_cliente" value="">
+                <input type="text" name="nome_cliente" class="texto_negrito" id="nome_cliente" value="">
                 <label for="cadastro_cliente">Data Cadastro</label>
-                <input type="text" name="data_cliente" id="data_cliente" value="">
+                <input type="text" name="data_cliente" class="texto_negrito" id="data_cliente" value="">
                 <div id="botoes_clientes">
                     <div id="maior-menor">
                         <input type="button" class="botao_ir_vir altura_botoes" name="botao_voltar" id="botao_voltar"
@@ -64,7 +66,7 @@
                     <div id="x-produto" class="fechar">x</div>
                 </div>
                 <label for="codigo_produto">Código</label>
-                <input type="text" name="codigo_produto" id="codigo_produto" class="tamanho_texto" value="">
+                <input type="text" name="codigo_produto" id="codigo_produto" class="texto_negrito" value="">
                 <label for="desc_produto">Descrição</label>
                 <input type="text" name="desc_produto" class="texto_negrito" id="desc_produto" value="">
                 <label for="preco_produto">Preço</label>
@@ -136,11 +138,15 @@
                     </div>
                 </div>
             </div>
+        </main>
     </div>
-    </div>
-
-    </main>
-    </div>
+    <fieldset id="quadrado-erro" class="desaparecer">
+        <p id="fala-erro">
+        </p>
+        <div id="espaco">
+            <button id="btn_ok">OK</button>
+        </div>
+    </fieldset>
 </body>
 
 </html>
