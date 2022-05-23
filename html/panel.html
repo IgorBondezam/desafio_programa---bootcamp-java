@@ -96,45 +96,40 @@
                     <h1 id="pedido_title">Pedidos</h1>
                     <div id="x-pedido" class="fechar">x</div>
                 </div>
-                <label for="codigo_pedido">Código do Cliente</label>
-                <input type="text" name="codigo_pedido" id="codigo_pedido" class="tamanho_texto" value="">
+                
+                <label for="nCliPed">Código do Cliente</label>
+                <input type="number" name="nCliPed" id="nCliPed" class="tamanho_texto" value="">
                 <label for="pedido_cliente">Cliente</label>
                 <input type="text" name="pedido_cliente" disabled class="texto_negrito" id="pedido_cliente" value="">
+
                 <div class="borda_localiza">
                     <label for="first_txt" class="font_azul texto_negrito">Localizar produto</label>
                     <div id="localiza_prod">
-                        <input type="text" name="first_txt" class="texto_negrito" id="first_txt" value="">
+                        <input type="number" name="first_txt" class="texto_negrito" id="first_txt" value="">
                         <input type="text" name="segunda_txt" disabled class="texto_negrito distancia_txt"
                             id="segunda_txt" value="">
                         <input type="text" name="terc_txt" disabled class="texto_negrito distancia_txt" id="terc_txt"
                             value="">
-                        <input type="text" name="quart_txt" class="texto_negrito distancia_txt" id="quart_txt" value="">
+                        <input type="number" name="quart_txt" class="texto_negrito distancia_txt" id="quart_txt" value="">
                         <input type="button" class="lancar_ped" name="lancar_ped distancia_txt" id="lancar_ped"
                             value="Lançar no Pedido">
                     </div>
+
                 </div>
                 <label class="font_azul texto_negrito">Itens do Pedido</label>
                 <table>
-                    <tbody>
-                        <thead class="texto_negrito cabeca_tabela">
-                            <th id="item_tabela">Item</th>
-                            <th id="descricao_tabela">Descrição</th>
-                            <th id="preco_tabela">Preço</th>
-                            <th id="qtd_tabela">Qtd</th>
-                            <th id="subtotal_tabela">Sub Total</th>
-                        </thead>
-                        <tr>
-                            <td>a</td>
-                            <td>b</td>
-                            <td>c</td>
-                            <td>d</td>
-                            <td>e</td>
-                        </tr>
+                    <thead class="texto_negrito cabeca_tabela">
+                        <th id="item_tabela">Item</th>
+                        <th id="descricao_tabela">Descrição</th>
+                        <th id="preco_tabela">Preço</th>
+                        <th id="qtd_tabela">Qtd</th>
+                        <th id="subtotal_tabela">Sub Total</th>
+                    </thead>
+                    <tbody id="tabela_itensPed">
                     </tbody>
                 </table>
                 <div id="div_total">
                     <div id="total">
-                        R$ 23.50
                     </div>
                 </div>
             </div>
