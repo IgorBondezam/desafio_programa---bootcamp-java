@@ -39,6 +39,10 @@ a{
     cursor: pointer;
 }
 
+.desativar_click{
+    pointer-events: none;
+}
+
 #cliente, #produto, #pedido, #sair{
     text-decoration: none;    
     padding-bottom: 3px;
@@ -318,8 +322,11 @@ label{
 #first_txt{
     width: 25%;
 }
-#terc_txt, #quart_txt{
-    width: 40%;
+#terc_txt{
+    width: 50%;
+}
+#quart_txt{
+    width: 30%;
 }
 
 .distancia_txt{
@@ -355,7 +362,7 @@ label{
 }
 
 #item_tabela, #preco_tabela, #qtd_tabela, #subtotal_tabela{
-    padding-right: 50px ;
+    padding-right: 6vw ;
 
 }
 
