@@ -7,7 +7,7 @@ window.onload = function () {
 
     let dadosUser = async function (){
 
-        let url = `../arquivos/usuario.json`  
+        let url = `arquivos/usuario.json`  
         let dadosFetch = await fetch(url)
         let dadosJson = await dadosFetch.json()
 
@@ -85,7 +85,7 @@ window.onload = function () {
                 if (user.value != user_entrar[i] && senha.value != senha_entrar[i]) throw new Error("Usuário e senha inválido! Tente novamente.")
                 if (user.value != user_entrar[i]) throw new Error("Usuário inválido! Tente Novamente.")
                 if (senha.value != senha_entrar[i]) throw new Error("Senha inválida! Tente novamente.")
-                window.open("panel.html", "_parent")
+                window.open("html/panel.html", "_parent")
             } catch (error) {
                 error_caixa()
                 escrita_error.innerHTML = error.message

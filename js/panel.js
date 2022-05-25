@@ -71,7 +71,7 @@ window.onload = function () {
     const x_pedido = document.getElementById("x-pedido")
 
     sair.addEventListener("click", function () {
-        window.open("index.html", "_parent")
+        window.open("../index.html", "_parent")
 
     })
 
