@@ -76,17 +76,25 @@ window.onload = function () {
     })
 
 
-    // passar pelas abas
+    // passar pelas abas laterais
 
     clientes.addEventListener("click", function () {
-        aba_cliente.classList.remove("desaparecer")
-        aba_prod.classList.add("desaparecer")
-        aba_ped.classList.add("desaparecer")
-        valor_nome_cli.setAttribute("disabled", true)
+        if (!aba_cliente.classList.contains("desaparecer")) {
+            aba_cliente.classList.add("desaparecer")
+        } else {
+            aba_cliente.classList.remove("desaparecer")
+            aba_prod.classList.add("desaparecer")
+            aba_ped.classList.add("desaparecer")
+            valor_nome_cli.setAttribute("disabled", true)
 
-        i = 0
-        abrir_clientes()
+            console.log(!aba_cliente.classList.contains("desaparecer"))
 
+            i = 0
+
+
+
+            abrir_clientes()
+        }
     })
 
     x_cliente.addEventListener("click", function () {
@@ -95,17 +103,20 @@ window.onload = function () {
 
 
     produto.addEventListener("click", function () {
-        aba_prod.classList.remove("desaparecer")
-        aba_cliente.classList.add("desaparecer")
-        aba_ped.classList.add("desaparecer")
-        valor_desc_pro.setAttribute("disabled", true)
-        valor_preco_pro.setAttribute("disabled", true)
-        valor_quant_pro.setAttribute("disabled", true)
+        if (!aba_prod.classList.contains("desaparecer")) {
+            aba_prod.classList.add("desaparecer")
+        } else {
+            aba_prod.classList.remove("desaparecer")
+            aba_cliente.classList.add("desaparecer")
+            aba_ped.classList.add("desaparecer")
+            valor_desc_pro.setAttribute("disabled", true)
+            valor_preco_pro.setAttribute("disabled", true)
+            valor_quant_pro.setAttribute("disabled", true)
 
-        i = 0
-        abrir_produtos()
+            i = 0
+            abrir_produtos()
 
-
+        }
     })
     x_produto.addEventListener("click", function () {
         aba_prod.classList.add("desaparecer")
@@ -113,10 +124,13 @@ window.onload = function () {
 
 
     pedido.addEventListener("click", function () {
-        aba_ped.classList.remove("desaparecer")
-        aba_cliente.classList.add("desaparecer")
-        aba_prod.classList.add("desaparecer")
-
+        if (!aba_ped.classList.contains("desaparecer")) {
+            aba_ped.classList.add("desaparecer")
+        } else {
+            aba_ped.classList.remove("desaparecer")
+            aba_cliente.classList.add("desaparecer")
+            aba_prod.classList.add("desaparecer")
+        }
     })
     x_pedido.addEventListener("click", function () {
         aba_ped.classList.add("desaparecer")
@@ -146,7 +160,7 @@ window.onload = function () {
             abrir_clientes()
         } catch (error) {
             causa_error(error)
-            
+
             abrir_clientes()
         }
     })
